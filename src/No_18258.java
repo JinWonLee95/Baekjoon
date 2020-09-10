@@ -12,7 +12,6 @@ public class No_18258 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-
         int num = Integer.parseInt(br.readLine());
 
         for(int i=0;i<num;i++){
@@ -22,26 +21,19 @@ public class No_18258 {
                 Integer data = Integer.parseInt(st.nextToken());
                 dequ.add(data);
             }else if(command.equals("pop")) {
-                bw.write(dequ.isEmpty()? -1 : dequ.poll());
-                bw.newLine();
+                bw.write(dequ.isEmpty()? -1+"\n": dequ.poll()+"\n");
             }else if(command.equals("size")) {
-                bw.write(dequ.size());
-                bw.newLine();
+                bw.write(dequ.size()+"\n");
             }else if(command.equals("front")) {
-                bw.write(dequ.isEmpty()? -1 : dequ.peek());
-                bw.newLine();
+                bw.write(dequ.isEmpty()? -1+"\n" : dequ.peek()+"\n");
             }else if(command.equals("back")) {
-                bw.write(dequ.isEmpty()? -1 : dequ.getLast());
-                bw.newLine();
+                bw.write(dequ.isEmpty()? -1+"\n" : dequ.getLast()+"\n");
             }else if(command.equals("empty")) {
-                bw.write(dequ.isEmpty()? 1 : 0);
-                bw.newLine();
+                bw.write(dequ.isEmpty()? 1+"\n" : 0+"\n");
             }
         }
-
         bw.flush();
         bw.close();
-
     }
 
 }
