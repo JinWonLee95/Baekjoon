@@ -12,7 +12,7 @@ public class No_1202 {
 
         for(int i=0; i<N; i++){
             StringTokenizer st2 = new StringTokenizer(br.readLine());
-            
+
         }
 
 
